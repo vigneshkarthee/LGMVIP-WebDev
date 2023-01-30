@@ -1,7 +1,7 @@
 body {
   text-align: center;
-  background-color: #3bcccc;
-  color: rgb(44, 169, 231);
+  background-color: #2ea1d2;
+  color: rgb(228, 30, 80);
   font-family: Helvetica, Arial;
 }
 
@@ -9,50 +9,50 @@ body {
   background-color: rgb(106, 230, 182);
   border: 0;
   color: rgb(42, 44, 44);
-  margin-left: 25px;
-  padding-bottom: 20px;
-  padding-left: 20px;
-  padding-top: 20px;
-  padding-right: 20px;
+  margin-inline-start: 25px;
+  padding-block-end: 20px;
+  padding-inline-start: 20px;
+  padding-block-start: 20px;
+  padding-inline-end: 20px;
   border-radius: 10px;
   cursor: pointer;
-  margin-top: 35px;
+  margin-block-start: 35px;
 }
 
 .remove {
-  margin-top: 13px;
+  margin-block-start: 13px;
   background-color: #05f2cb;
-  float: right;
+  float: inline-end;
   clear: both;
-  padding-right: 20px;
+  padding-inline-end: 20px;
   border-radius: 5px;
-  width: 60px;
+  inline-size: 60px;
 }
 
 #wrapper {
-  width: 450px;
+  inline-size: 450px;
   background-color: #fafafa;
-  margin-top: 120px;
-  margin-left: 295px;
-  padding-bottom: 30px;
-  padding-left: 50px;
-  padding-top: 30px;
-  padding-right: 65px;
+  margin-block-start: 120px;
+  margin-inline-start: 295px;
+  padding-block-end: 30px;
+  padding-inline-start: 50px;
+  padding-block-start: 30px;
+  padding-inline-end: 65px;
   border-radius: 25px;
 }
 
 ul {
   list-style:none;
-  text-align: left;
+  text-align: start;
   line-height: 35px;
 }
 
 #task {
   width : 320px;
-  height: 30px;
-  margin-left: 17px;
+  block-size: 30px;
+  margin-inline-start: 17px;
 }
 
 h1 {
-  margin-top: 30px;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+  margin-block-start: 30px;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
 }
