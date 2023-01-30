@@ -1,69 +1,27 @@
-window.onload = function () {
-  function get_todos() {
-    var todos = new Array();
-    var todos_str = localStorage.getItem("todo");
-    if (todos_str != []) {
-      todos = JSON.parse(todos_str);
-    }
-    return todos;
-  }
-  function add() {
-    var task = document.getElementById("task").value;
-    if (task == "" || task == " ") {
-      alert(`field cannot be empty`);
+document.querySelector('#push').onclick = function() {
+    if (document.querySelector('#newtask input').value.length == 0) {
+        alert("Please Enter a Task")
     } else {
-      var todos = get_todos();
-      todos.push(task);
-      localStorage.setItem("todo", JSON.stringify(todos));
-      document.getElementById("task").value = " ";
-      show();
-      return false;
+        document.querySelector('#tasks').innerHTML += `
+  <div class="task">
+      <span id="taskname">
+          ${document.querySelector('#newtask input').value}
+      </span>
+      <button class="delete">
+          <i class="far fa-trash-alt"></i>
+      </button>
+  </div>
+`;
+
+        var current_tasks = document.querySelectorAll(".delete");
+        for (var i = 0; i < current_tasks.length; i++) {
+            current_tasks[i].onclick = function() {
+                this.parentNode.remove();
+            }
+        }
+
+
+
+
     }
-  }
-
-  function clearDefault(a) {
-    if (a.defaultValue == a.value) {
-      a.value = " ";
-    }
-  }
-
-  function remove() {
-    var id = this.getAttribute("id");
-    var todos = get_todos();
-    todos.splice(id, 1);
-    localStorage.setItem("todo", JSON.stringify(todos));
-
-    show();
-
-    return false;
-  }
-
-  function show() {
-    var todos = get_todos();
-
-    var html = "<ul>";
-    for (var i = 0; i < todos.length; i++) {
-      html +=
-        "<li>" +
-        todos[i] +
-        '<button class="remove" id="' +
-        i +
-        '">Delete</button> </li>';
-    }
-    html += "<ul/>";
-
-    document.getElementById("todos").innerHTML = html;
-
-    var buttons = document.getElementsByClassName("remove");
-    for (var i = 0; i < buttons.length; i++) {
-      buttons[i].addEventListener("click", remove);
-    }
-  }
-  document.getElementById("add").addEventListener("click", add);
-  show();
-  document.querySelector("#task").addEventListener("keyup", (event) => {
-    if (event.key !== "Enter") return;
-    document.querySelector("#add").click();
-    event.preventDefault();
-  });
-};
+}

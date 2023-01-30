@@ -1,58 +1,105 @@
+*,
+*:before,
+*:after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
 body {
-  text-align: center;
-  background-color: #2ea1d2;
-  color: rgb(228, 30, 80);
-  font-family: Helvetica, Arial;
+    block-size: 100vh;
+    background: #066acd;
 }
 
-#add {
-  background-color: rgb(106, 230, 182);
-  border: 0;
-  color: rgb(42, 44, 44);
-  margin-inline-start: 25px;
-  padding-block-end: 20px;
-  padding-inline-start: 20px;
-  padding-block-start: 20px;
-  padding-inline-end: 20px;
-  border-radius: 10px;
-  cursor: pointer;
-  margin-block-start: 35px;
+.container {
+    inline-size: 40%;
+    min-inline-size: 450px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    inset-block-start: 50%;
+    inset-inline-start: 50%;
+    background: white;
+    border-radius: 10px;
 }
 
-.remove {
-  margin-block-start: 13px;
-  background-color: #05f2cb;
-  float: inline-end;
-  clear: both;
-  padding-inline-end: 20px;
-  border-radius: 5px;
-  inline-size: 60px;
+#newtask {
+    position: relative;
+    padding: 30px 20px;
 }
 
-#wrapper {
-  inline-size: 450px;
-  background-color: #fafafa;
-  margin-block-start: 120px;
-  margin-inline-start: 295px;
-  padding-block-end: 30px;
-  padding-inline-start: 50px;
-  padding-block-start: 30px;
-  padding-inline-end: 65px;
-  border-radius: 25px;
+#newtask input {
+    inline-size: 75%;
+    block-size: 45px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    border: 2px solid #d1d3d4;
+    padding: 12px;
+    color: #111111;
+    font-weight: 500;
+    position: relative;
+    border-radius: 5px;
 }
 
-ul {
-  list-style:none;
-  text-align: start;
-  line-height: 35px;
+#newtask input:focus {
+    outline: none;
+    border-color: #0d75ec;
 }
 
-#task {
-  width : 320px;
-  block-size: 30px;
-  margin-inline-start: 17px;
+#newtask button {
+    position: relative;
+    float: inline-end;
+    inline-size: 20%;
+    block-size: 45px;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    background-color: #0d75ec;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    outline: none;
 }
 
-h1 {
-  margin-block-start: 30px;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+#tasks {
+    background-color: #ffffff;
+    padding: 30px 20px;
+    margin-block-start: 10px;
+    border-radius: 10px;
+    inline-size: 100%;
+    position: relative;
+}
+
+.task {
+    background-color: #c5e1e6;
+    block-size: 50px;
+    margin-block-end: 8px;
+    padding: 5px 10px;
+    display: flex;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #939697;
+    cursor: pointer;
+}
+
+.task span {
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.task button {
+    background-color: #0a2ea4;
+    color: #ffffff;
+    block-size: 100%;
+    inline-size: 40px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+
+.completed {
+    text-decoration: line-through;
 }
